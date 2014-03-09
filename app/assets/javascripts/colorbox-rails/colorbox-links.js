@@ -11,7 +11,7 @@
   $colorboxOverlay = '';
   $colorboxBox = '';
 
-  $(document).on('ready', function() {
+  document.addEventListener("page:change", function() {
     $colorboxOverlay = $("#cboxOverlay");
     $colorboxBox = $("#colorbox");
   
@@ -54,7 +54,7 @@
     });
   });
   
-  $(document).on('page:change', function() {
+  document.addEventListener("page:change", function() {
       $colorboxOverlay.appendTo("body");
       $colorboxBox.appendTo("body");
   });      
