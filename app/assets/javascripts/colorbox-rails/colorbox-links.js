@@ -12,8 +12,14 @@
   $colorboxBox = '';
 
   $(document).on('ready', function() {
-    $colorboxOverlay = $("#cboxOverlay");
-    $colorboxBox = $("#colorbox");
+    overlay = $("#cboxOverlay");
+    box = $("#colorbox");
+    if(overlay[0] !== undefined) {
+      $colorboxOverlay = overlay;
+    }
+    if(box[0] !== undefined) {
+      $colorboxBox = box;
+    }
   
     $(document).on('click', '[data-colorbox="true"]', function(e) {
       e.preventDefault();
